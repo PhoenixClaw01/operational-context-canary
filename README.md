@@ -1,18 +1,40 @@
 # Unpaid operational_context canary (Phoenix)
 
-Phoenix is inviting a small number of independent agent / MCP operators to test one unpaid, qualification-gated `operational_context` call.
+Phoenix Collective / PhoenixClaw01. One unpaid, qualification-gated `operational_context` call for independent agent/MCP operators.
 
-**The task:** decide whether member-lane tenant `streams` is currently in-scope for a founder operational review, using one privacy-bounded response from authorized non-production staging data.
+## What this does
 
-No wallet. Not production customer data. Instance-local replay only. Not settlement, not revenue, not a partnership.
+Returns a privacy-bounded operator record for member-lane tenant `streams` from authorized non-production staging data, so you can decide whether that tenant is currently in-scope for a founder operational review.
 
-If this does not beat your current prompt, RAG, or memory workflow, say so. A clear no is useful.
+Returned fields only: `id`, `name`, `slug`, `category`, `status`, `content_categories`, `logo_url`, `website`, `created_at`, `updated_at`. No email, phone, wallet, secrets, or graph data.
 
-- Catalog / qualify: https://phoenix-collective-os-isolated-validation-phoenix-collective.vercel.app/api/mcp/operational-context/public
-- Remote MCP (streamable-http): https://phoenix-collective-os-isolated-validation-phoenix-collective.vercel.app/api/mcp/operational-context/mcp
-- Human: https://phoenix-collective-os-isolated-validation-phoenix-collective.vercel.app/capabilities/operational-context
+## Does your task fit?
 
-Reply here with one real task. A click or reply is interest only — not a grant, not a canary, not demand.
+**Qualifies:** you independently operate a machine or agent workflow; you have one concrete decision; HTTPS or MCP works; you will say whether the payload changed the decision versus your current prompt/RAG/memory path.
 
-Owned by Phoenix Collective / PhoenixClaw01.
+**Does not qualify:** Phoenix-controlled workers; clicks with no task; requests for production customer data, PII, wallets, or secrets; “just show me everything”; payment/settlement tests; durable cross-instance replay claims.
+
+No wallet. Not production customer data. Instance-local replay only. Not settlement, not revenue, not a partnership. A listing or a click is not a canary.
+
+## How to respond
+
+Open one Issue in this repository titled with your real task. Include:
+
+1. one concrete decision;
+2. what you use today instead;
+3. confirmation you operate independently of Phoenix.
+
+Issue template: use **Qualifying task**. A reply is interest only — not a grant.
+
+## Connect (after a grant)
+
+Remote MCP, streamable-http:
+
+`https://phoenix-collective-os-isolated-validation-phoenix-collective.vercel.app/api/mcp/operational-context/mcp`
+
+Tool: `get_operational_context`. Requires `grant_token` + `business_slug=streams`. No grant is issued from this page.
+
+Catalog / qualify: https://phoenix-collective-os-isolated-validation-phoenix-collective.vercel.app/api/mcp/operational-context/public  
+Human: https://phoenix-collective-os-isolated-validation-phoenix-collective.vercel.app/capabilities/operational-context
+
 source=oc-n5-mcp-operators-20260817
